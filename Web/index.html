@@ -1,0 +1,88 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="styles/gradient.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <script src="scripts/main.js"></script>
+
+</head>
+<body>
+
+<!-- partial:index.partial.html -->
+<div class="gradient"></div>
+<!-- partial -->
+
+<header>
+    <h3>Welcome</h3>
+    <button>O</button>
+</header>
+
+<div class="start">
+    <div id="title"><h1>Raphael Malleron</h1></div>
+    <button icon="https://img.icons8.com/fluency/48/down-squared.png">See more</button>
+
+</div>
+
+<svg id="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+    <path fill="#273036" fill-opacity="1" d="M0,64L60,90.7C120,117,240,171,360,160C480,149,600,75,720,85.3C840,96,960,192,1080,240C1200,288,1320,288,1380,288L1440,288L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+</svg>
+
+<div class="main">
+    <div class="scroll">
+        <div id="about"><h1>About Me</h1></div>
+        <div id="skills"><h1>Skills</h1></div>
+        <div id="projects"><h1>Github and projects</h1></div>
+    </div>
+    <div class="content">
+
+        <div class="about">
+            <p>Im a 18yo student learning computer sciences at <a href="https://www.estiam.education/">ESTIAM</a>, Bourges</p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent non quam quis tellus iaculis sollicitudin vel eget libero. Ut rutrum mi at enim cursus, ultricies porttitor lectus sodales. Donec mattis magna vestibulum arcu pretium, non pretium sem ornare. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque maximus maximus vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam gravida gravida porttitor. Nunc imperdiet nibh at ante varius, eget bibendum neque mattis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc.
+        </div>
+
+        <div class="skills">
+
+            <p onclick="showElement('software')">+ Software developpement</p>
+            <div class="software">
+                <img src="https://img.icons8.com/color/144/c-plus-plus-logo.png" alt="c-plus-plus-logo" class="skills-icons"/>
+                <img src="https://img.icons8.com/color/144/c-programming.png" alt="c-logo" class="skills-icons"/>
+                <img src="https://img.icons8.com/color/144/python--v1.png" alt="python-logo" class="skills-icons"/>
+                <div class="github-card" data-github="raphmn" data-width="400" data-height="150" data-theme="default"></div>
+            </div>
+
+            <p onclick="showElement('web')">+ Web programming</p>
+            <div class="web">
+                <img width="144" height="144" src="https://img.icons8.com/color/144/html-5--v1.png" alt="html-5--v1" class="skills-icons"/>
+                <img width="144" height="144" src="https://img.icons8.com/color/144/css3.png" alt="css3" class="skills-icons"/>
+                <img width="144" height="144" src="https://img.icons8.com/color/144/javascript--v1.png" alt="javascript--v1" class="skills-icons"/>
+            </div>
+
+            <p onclick="showElement('database')">+ Database</p>
+            <div class="database">
+
+                <img width="150" height="150" src="https://img.icons8.com/ios/150/mysql-logo.png" alt="mysql-logo" class="skills-icons"/>
+            </div>
+
+
+        </div>
+
+        <div class="github">
+            <a href="https://github.com/raphmn/pytify"><img src="https://gh-card.dev/repos/raphmn/pytify.svg"></a>
+            <a href="https://github.com/raphmn/cpp-tictactoe"><img src="https://gh-card.dev/repos/raphmn/cpp-tictactoe.svg"></a>
+            <a href="https://github.com/raphmn/cpp-login-app"><img src="https://gh-card.dev/repos/raphmn/cpp-login-app.svg"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- https://img.icons8.com/fluency/48/down-squared.png >
+
+
+</body>
+</html>

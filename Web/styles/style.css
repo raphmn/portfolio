@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+html
+{
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body
+{
+    color:whitesmoke;
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden; /* Désactive le défilement horizontal */
+    align-items: center;
+}
+
+.start
+{
+    font-size: 30px;
+    border: solid 2px red;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#wave
+{
+    width: 100vw;
+}
+
+div
+{
+    border: solid 2px green;
+}
+
+.web
+{
+    display: none;
+}
+
+.software
+{
+    display: none;
+}
+
+.database
+{
+    display: none;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    background-color: #273036;
+    width: 84vw;
+    height: 98vh;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    align-content: space-around;
+    gap: 12vw;
+}
+
+header
+{
+    border: solid 2px green;
+    display: flex;
+    position: fixed;
+    padding: 2vh;
+    width: 96vw;
+
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.scroll
+{
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 15vh;
+    padding-bottom: 15vh;
+    background-color: #222222;
+    border-radius: 15px;
+
+
+}
+
+.content
+{
+    display: flex;
+    flex-direction: column;
+    width: 70vw;
+}
+
+.about
+{
+    font-size: 2vw;
+    background-color: #222222;
+    border-radius: 15px;
+    padding: 7vh;
+}
