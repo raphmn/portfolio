@@ -1,22 +1,29 @@
-function showElement(element) {
-    const elt = document.getElementsByClassName(element)[0];
-    if (elt.style.display === 'flex') {
-        elt.style.display = 'none';
-        return 0;
-    }
-    elt.style.display = 'flex';
-}
+// main.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Smooth scroll for navigation links
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 
-window.addEventListener('scroll', function() {
-    var element = document.getElementById('scroll');
-    var distanceFromTop = element.offsetTop;
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px'
+    };
 
-    if (window.scrollY > distanceFromTop) {
-        element.style.position = 'fixed';
-        element.style.top = '0';
-        element.style.left = '0';
-        element.style.width = '100%'; // Pour s'assurer que l'élément reste plein écran
-    } else {
-        element.style.position = 'static'; // Retour à son comportement normal
-    }
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.content-section').forEach(section => {
+        observer.observe(section);
+    });
 });
