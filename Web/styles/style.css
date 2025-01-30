@@ -1,110 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+/* style.css */
+:root {
+    --primary-color: #5b37eb;
+    --secondary-color: #37eba9;
+    --text-color: #f8f9fa;
+    --bg-color: #222;
+    --section-spacing: 4rem;
+}
 
-html
-{
+body {
     font-family: 'Titillium Web', sans-serif;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-body
-{
-    color:whitesmoke;
-    background-color: #222;
+header {
+    position: fixed;
+    top: 0;
+    width: 97%;
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: column;
-    overflow-x: hidden; /* Désactive le défilement horizontal */
+    justify-content: space-between;
     align-items: center;
+    background: rgba(34, 34, 34, 0.95);
+    z-index: 1000;
 }
 
-.start
-{
-    font-size: 30px;
-    border: solid 2px red;
-    width: 100vw;
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 2rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--secondary-color);
+}
+
+.hero {
     height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    flex-direction: column;
-}
-
-#wave
-{
-    width: 100vw;
-}
-
-div
-{
-    border: solid 2px green;
-}
-
-.web
-{
-    display: none;
-}
-
-.software
-{
-    display: none;
-}
-
-.database
-{
-    display: none;
-}
-
-.main
-{
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    background-color: #273036;
-    width: 84vw;
-    height: 98vh;
-    padding-left: 8vw;
-    padding-right: 8vw;
-    align-content: space-around;
-    gap: 12vw;
-}
-
-header
-{
-    border: solid 2px green;
-    display: flex;
-    position: fixed;
-    padding: 2vh;
-    width: 96vw;
-
     align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+    text-align: center;
+    padding: 2rem;
 }
 
-.scroll
-{
-    display: flex;
-    flex-direction: column;
-    width: 30vw;
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    display: inline-flex;
     align-items: center;
-    justify-content: space-around;
-    padding-top: 15vh;
-    padding-bottom: 15vh;
-    background-color: #222222;
-    border-radius: 15px;
-
-
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: transform 0.3s ease;
 }
 
-.content
-{
+.cta-button:hover {
+    transform: translateY(-3px);
+}
+
+.content-section {
+    padding: var(--section-spacing) 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-align: center;
+}
+
+.skill-icons {
     display: flex;
-    flex-direction: column;
-    width: 70vw;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
-.about
-{
-    font-size: 2vw;
-    background-color: #222222;
-    border-radius: 15px;
-    padding: 7vh;
+.skill-icons img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.3s ease;
+}
+
+.skill-icons img:hover {
+    transform: translateY(-5px);
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 2rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: var(--text-color);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
 }
